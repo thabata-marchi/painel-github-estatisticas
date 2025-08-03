@@ -69,9 +69,17 @@ jobs:
         git commit -m "🤖 Atualizar estatísticas - $(date -u +%Y-%m-%d)"
         git push
     
+    - name: Setup Pages
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      uses: actions/configure-pages@v4
+    
+    - name: Upload artifact
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: '.'
+    
     - name: Deploy to GitHub Pages
       if: steps.verify-changed-files.outputs.changed == 'true'
-      uses: actions/deploy-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./
+      id: deployment
+      uses: actions/deploy-pages@v4
