@@ -1,0 +1,64 @@
+# Arquivos de documentação e configuração sensíveis
+SETUP_PAGES.md
+
+# Arquivos Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Ambientes virtuais
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs e editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+
+# Arquivos temporários
+.tmp/
+temp/
+*.tmp
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Configurações locais
+.env
+.env.local
+.env.*.local
+
+# Cache
+.cache/
+*.cache
+
+# Backup files
+*.bak
+*.backup

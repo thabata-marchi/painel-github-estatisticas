@@ -1,0 +1,38 @@
+# Configuração do GitHub Pages
+title: "Painel GitHub Estatísticas"
+description: "Estatísticas agregadas das minhas contas do GitHub"
+url: ""
+baseurl: ""
+
+# Tema (opcional)
+theme: minima
+
+# Configurações do site
+lang: pt-BR
+timezone: America/Sao_Paulo
+
+# Incluir arquivos
+include:
+  - "estatisticas.json"
+  - "index.html"
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Configurações de build
+markdown: kramdown
+highlighter: rouge
+
+# Configurações de SEO
+author: "Thabata Marchi"
+social:
+  - github
+
+# Excluir da build
+exclude:
+  - agregador.py
+  - generate_readme.py
+  - .github/
+  - .gitignore
