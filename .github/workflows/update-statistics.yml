@@ -64,9 +64,10 @@ jobs:
         git config --local user.email "tatha.marchi@gmail.com"
         git config --local user.name "thabata-marchi"
         git add estatisticas.json
-        git add index.html || true  # Adiciona se existir
-        git add README.md || true   # Adiciona se existir
+        git add index.html || true
+        git add README.md || true
         git commit -m "🤖 Atualizar estatísticas - $(date -u +%Y-%m-%d)"
+        git pull --rebase origin main
         git push
     
     - name: Setup Pages
